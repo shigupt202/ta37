@@ -1,0 +1,15 @@
+on: 
+  workflow_dispatch:
+
+name: Provision azure resources
+
+jobs:
+  provision-azure-resources:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}

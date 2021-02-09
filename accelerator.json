@@ -1,0 +1,25 @@
+{
+  "name": "Nodejs accelerator",
+  "description": "This is a nodejs accelerator",
+  "variables" : [
+  {
+    "workflowPath": ".github/workflows/deploy.yml",
+    "variables": [
+      {
+        "name": "RESOURCE_NAME",
+        "description": "The name of the resource"
+      },
+      {
+        "name": "CONNECTION_ID",
+        "description": "The connection id"
+      }
+      ]
+  }
+  ],
+  "secrets" : [
+    {
+      "name": "AZURE_CREDENTIALS",
+      "description": "Enter your azure credentials (Output of az ad sp create-for-rbac command)"
+    }
+    ]
+}
